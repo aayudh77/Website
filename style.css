@@ -1,0 +1,462 @@
+:root {
+  --bg-dark: #0d1117;
+  --bg-light: #f0f0f0; /* Softer grey background */
+  --text-dark: #222222;
+  --text-light: #e6e8eb;
+  --accent-color: #58a6ff;
+  --accent-dark: #1f6feb;
+  --glass-bg-dark: rgba(255, 255, 255, 0.1);
+  --glass-bg-light: rgba(235, 235, 235, 0.8); /* Slightly darker glass background */
+  --transition-time: 0.4s;
+}
+
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+  transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
+  min-height: 100vh;
+}
+
+/* Anchor styles */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-dark);
+  text-shadow: 0 0 8px var(--accent-color), 0 0 15px var(--accent-color);
+  outline: none;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 1rem 2rem;
+  background: rgba(13, 17, 23, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.nav-left {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--accent-color);
+}
+
+.nav-right a {
+  margin-left: 20px;
+  font-weight: 500;
+  color: inherit;
+}
+
+.nav-right button#theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-right button#theme-toggle:hover,
+.nav-right button#theme-toggle:focus-visible {
+  transform: rotate(20deg);
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding-top: 80px; /* Reduced padding */
+  padding-bottom: 40px; /* Reduced padding */
+  overflow: hidden;
+  z-index: 1;
+  color: var(--text-light);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('entrepreneurship-background.jpg') no-repeat center center/cover; /* Add your background image */
+  z-index: -1;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  top: 20%;
+  left: 10%;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  right: 15%;
+}
+
+.shape-3 {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.4);
+  bottom: 10%;
+  left: 40%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 15px var(--accent-color);
+  transition: box-shadow 0.4s ease;
+}
+
+.profile-pic:hover,
+.profile-pic:focus-visible {
+  box-shadow: 0 0 25px var(--accent-dark);
+  outline: none;
+}
+
+.typewriter {
+  font-size: 2rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--accent-color);
+  width: 24ch;
+  margin: 0 auto;
+  animation: typing 3s steps(24, end), blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 24ch; }
+}
+
+@keyframes blinkCaret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--accent-color); }
+}
+
+/* Sections */
+.section {
+  padding: 40px 20px; /* Reduced padding */
+  max-width: 900px;
+  margin: auto;
+  color: var(--text-light);
+}
+
+/* Section headings */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  user-select: none;
+}
+
+/* Portfolio grid */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Cards with glassmorphism */
+.card, .glass-card {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgb(88 166 255 / 0.3);
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-light);
+}
+
+.card:hover, .card:focus-within, .glass-card:hover, .glass-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 36px rgb(88 166 255 / 0.6);
+  outline: none;
+}
+
+/* Timeline Styles */
+.vertical-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto 2rem auto; /* Reduced margin */
+  padding: 0 20px;
+}
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-item .content {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 8px 24px rgb(88 166 255 / 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-light);
+}
+
+.timeline-item .content:hover,
+.timeline-item .content:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgb(88 166 255 / 0.6);
+  outline: none;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.left::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item.right::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: -10px;
+  width: 18px;
+  height: 18px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.date {
+  font-weight: 700;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+/* Contact Button */
+.email-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 28px;
+  background-color: #238636;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 12px rgba(35,134,54,0.7);
+}
+
+.email-btn:hover,
+.email-btn:focus-visible {
+  background-color: #2ea043;
+  box-shadow: 0 8px 18px rgba(46,160,67,0.9);
+  outline: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  background: var(--bg-dark);
+  margin-top: 40px;
+  color: var(--text-light);
+  user-select: none;
+}
+
+.footer-text {
+  color: var(--text-light);
+}
+
+.socials a img {
+  width: 24px;
+  margin: 0 12px;
+  filter: brightness(90%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover img,
+.socials a:focus-visible img {
+  filter: brightness(130%);
+  transform: scale(1.15);
+  outline: none;
+}
+
+/* Light Mode Styles */
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Force dark text on everything in light mode */
+body.light,
+body.light p,
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4,
+body.light h5,
+body.light h6,
+body.light span,
+body.light a,
+body.light .subtitle,
+body.light .date,
+body.light .timeline-item .content,
+body.light .timeline-item .content p {
+  color: var(--text-dark) !important;
+}
+
+body.light a {
+  color: #3a3a3a; /* Darker link color */
+}
+
+body.light a:hover,
+body.light a:focus-visible {
+  color: #1e3a8a;
+}
+
+body.light .navbar {
+  background: rgba(230, 230, 230, 0.95); /* Softer navbar background */
+  border-bottom: 1px solid #d0d0d0; /* Subtle border */
+  color: var(--text-dark);
+}
+
+body.light .card,
+body.light .glass-card,
+body.light .timeline-item .content {
+  background: var(--glass-bg-light);
+  color: var(--text-dark);
+  box-shadow: 0 0 15px rgb(0, 0, 0 / 0.1);
+}
+
+body.light .email-btn {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.7);
+}
+
+body.light .email-btn:hover,
+body.light .email-btn:focus-visible {
+  background-color: #1d4ed8;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.9);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vertical-timeline::before {
+    left: 12px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+    text-align: left !important;
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+  }
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .portfolio-grid {
+    flex-direction: column;
+  }
+}
+
+/* Fix for glass background looking too white in bright mode */
+body.light .glass,
+body.light .timeline-item::before {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: fix for bright links */
+body.light a {
+  color: #1a1a1a;
+}
+body.light a:hover {
+  color: #000000;
+}
+
+/* Bright mode caret (typewriter) */
+body.light .typewriter::after {
+  border-right: 2px solid var(--text-dark);
+}
