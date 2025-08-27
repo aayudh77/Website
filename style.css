@@ -17,6 +17,7 @@ a:hover { color:#1f6feb; }
   .nav-right { 
     position:absolute; top:60px; right:0; width:100%; background:rgba(13,17,23,0.98); flex-direction:column; align-items:flex-start; padding:1rem 2rem; display:none;
   }
+  
   .nav-right.active { display:flex; }
   .menu-toggle { display:block; }
 }
