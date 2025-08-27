@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aayudh Sapkota</title>
   <link rel="icon" type="image/png" href="aayudh.png" />
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
     <div class="nav-left">Aayudh</div>
+    <button class="menu-toggle" aria-label="Open menu" tabindex="0">☰</button>
     <nav class="nav-right">
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
@@ -21,66 +21,66 @@
     </nav>
   </header>
 
-  <section class="hero" data-aos="fade-down">
-    <img src="aayudh.png" alt="Aayudh Sapkota" class="profile-pic" />
-    <h1 class="typewriter">I am Aayudh Sapkota</h1>
-  </section>
+  <main>
+    <section class="hero">
+      <img src="aayudh.png" alt="Aayudh Sapkota" class="profile-pic" />
+      <h1 class="typewriter">I am Aayudh Sapkota</h1>
+      <p class="hero-desc">IT professional driven by technology and innovation.</p>
+    </section>
 
-  <section id="about" class="section" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-      I’m Aayudh Sapkota — an IT professional driven by technology and innovation.
-      I create smart, scalable solutions combining creativity and real-world problem solving.
-    </p>
-  </section>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I’m Aayudh Sapkota — an IT professional driven by technology and innovation.
+        I create smart, scalable solutions combining creativity and real-world problem solving.
+      </p>
+    </section>
 
-  <section id="portfolio" class="section" data-aos="fade-up" data-aos-delay="100">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="card">
-        <h3>Writer @ WealthyPeeps</h3>
-        <p>Created high-performing finance and entertainment content tailored for SEO.</p>
-        <a href="http://wealthypeeps.com/author/aayudh/" target="_blank" rel="noopener">Read Articles</a>
-      </div>
-      <div class="card">
-        <h3>SEO Expert</h3>
-        <p>Built content strategies that drove measurable growth using keyword research and analytics.</p>
-      </div>
-      <div class="card">
-        <h3>Strategist</h3>
-        <p>Developed marketing and tech strategies bridging user behavior with data-driven decisions.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="timeline" class="section" data-aos="fade-up" data-aos-delay="200">
-    <h2>Timeline</h2>
-    <div class="timeline">
-      <div class="line"></div>
-
-      <div class="timeline-container left" data-aos="fade-right">
-        <div class="timeline-card">
-          <span>Mar 2021 – Dec 2023</span>
-          <p>Content Writer at Hansikar Tech — focused on celebrity niche content and articles.</p>
+    <section id="portfolio" class="section">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="card">
+          <h3>Writer @ WealthyPeeps</h3>
+          <p>Created high-performing finance and entertainment content tailored for SEO.</p>
+          <a href="http://wealthypeeps.com/author/aayudh/" target="_blank" rel="noopener">Read Articles</a>
+        </div>
+        <div class="card">
+          <h3>SEO Expert</h3>
+          <p>Built content strategies that drove measurable growth using keyword research and analytics.</p>
+        </div>
+        <div class="card">
+          <h3>Strategist</h3>
+          <p>Developed marketing and tech strategies bridging user behavior with data-driven decisions.</p>
         </div>
       </div>
+    </section>
 
-      <div class="timeline-container right" data-aos="fade-left">
-        <div class="timeline-card">
-          <span>Feb 2024 – Apr 2025</span>
-          <p>Consultant & Moderator at Yodha Astro — consulting foreign clients and moderating birth charts provided by licensed astrologers.</p>
+    <section id="timeline" class="section">
+      <h2>Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-event">
+          <span class="timeline-date">Mar 2021 – Dec 2023</span>
+          <div class="timeline-content">
+            Content Writer at Hansikar Tech — focused on celebrity niche content and articles.
+          </div>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">Feb 2024 – Apr 2025</span>
+          <div class="timeline-content">
+            Consultant & Moderator at Yodha Astro — consulting foreign clients and moderating birth charts provided by licensed astrologers.
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section" data-aos="fade-up" data-aos-delay="300">
-    <h2>Contact</h2>
-    <p>Click below to email me directly:</p>
-    <a href="mailto:sapkotaaayudh2@gmail.com" class="email-btn">Send Email</a>
-  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Click below to email me directly:</p>
+      <a href="mailto:sapkotaaayudh2@gmail.com" class="email-btn">Send Email</a>
+    </section>
+  </main>
 
-  <footer class="footer" data-aos="fade-up" data-aos-delay="400">
+  <footer class="footer">
     <div class="socials">
       <a href="https://www.instagram.com/aayudh_017/" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
       <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" /></a>
@@ -89,7 +89,6 @@
     <p>© 2025 Aayudh Sapkota</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
