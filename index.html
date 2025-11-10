@@ -1,115 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aayudh Sapkota</title>
   <link rel="icon" type="image/png" href="aayudh.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="navbar">
-    <div class="nav-left">
-      <img src="aayudh.png" alt="Logo" style="width:32px;height:32px;border-radius:50%;vertical-align:middle;margin-right:8px;">
-      <span>Aayudh</span>
-    </div>
-    <button class="menu-toggle" aria-label="Open menu" tabindex="0">☰</button>
+    <div class="nav-left">Aayudh</div>
     <nav class="nav-right">
       <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#timeline">Timeline</a>
+      <a href="#timeline">Experience</a>
       <a href="#contact">Contact</a>
-      <button id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="home" data-aos="fade-down">
       <img src="aayudh.png" alt="Aayudh Sapkota" class="profile-pic" />
-      <h1 class="typewriter">Hi, I'm <span style="color:#58a6ff;">Aayudh Sapkota</span></h1>
-      <p class="hero-desc">IT professional passionate about <span style="color:#1f6feb;">technology</span> and <span style="color:#238636;">innovation</span>.</p>
-      <div style="margin-top:24px;">
-        <a href="#contact" class="email-btn" style="font-size:1.1rem;">Let's Connect</a>
+      <h1 class="typewriter">I am Aayudh Sapkota</h1>
+      <p class="subtle">Customer counselor / advisor — focused on client support & engagement</p>
+    </section>
+
+    <section id="about" class="section" data-aos="fade-up">
+      <h2>About</h2>
+      <p>
+        I aim to apply my skills and knowledge to contribute to organizational growth while developing professionally.
+        Experienced in client communications, consultation, and cross-team collaboration to improve service quality.
+      </p>
+
+      <div class="contact-block" data-aos="fade-up" data-aos-delay="120">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:sapkotaaayudh2@gmail.com">sapkotaaayudh2@gmail.com</a></p>
+        <p>Phone: <a href="tel:+9779761747789">+977 9761747789</a></p>
+        <p>Location: Dakshindhoka, Gokarneshwor</p>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:24px;">
-        <div style="flex:1;min-width:220px;">
-          <p>
-            I'm a creative IT professional who loves solving real-world problems with smart, scalable solutions.
-            My journey blends <strong>content creation</strong>, <strong>SEO strategy</strong>, and <strong>tech innovation</strong>.
-          </p>
-          <ul style="margin-top:16px; color:#b1b1b1;">
-            <li>🧠 Always learning new tech</li>
-            <li>📈 Data-driven decision maker</li>
-            <li>✍️ Writer & strategist</li>
-          </ul>
-        </div>
-        <div style="flex:1;min-width:220px;text-align:center;">
-          <img src="aayudh.png" alt="Aayudh Sapkota" style="width:90px;height:90px;border-radius:50%;border:2px solid #58a6ff;">
-        </div>
-      </div>
-    </section>
+    <section id="timeline" class="section" data-aos="fade-up">
+      <h2>Experience</h2>
 
-    <section id="portfolio" class="section">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <div class="card">
-          <h3>Writer @ WealthyPeeps</h3>
-          <p>Created high-performing finance and entertainment content tailored for SEO.</p>
-          <a href="http://wealthypeeps.com/author/aayudh/" target="_blank" rel="noopener">Read Articles →</a>
-        </div>
-        <div class="card">
-          <h3>SEO Expert</h3>
-          <p>Built content strategies that drove measurable growth using keyword research and analytics.</p>
-        </div>
-        <div class="card">
-          <h3>Strategist</h3>
-          <p>Developed marketing and tech strategies bridging user behavior with data-driven decisions.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="timeline" class="section">
-      <h2>Timeline</h2>
       <div class="timeline">
-        <div class="timeline-event">
-          <span class="timeline-date">Mar 2021 – Dec 2023</span>
-          <div class="timeline-content">
-            <strong>Content Writer at Hansikar Tech</strong><br>
-            Focused on celebrity niche content and articles.
+        <div class="line"></div>
+
+        <!-- Experience from CV -->
+        <div class="timeline-container left" data-aos="fade-right">
+          <div class="timeline-card">
+            <span class="date">January 2022 – December 2023</span>
+            <h3>Customer Counselor / Advisor</h3>
+            <h4>Yodha Astrology — Baneshwor</h4>
+            <ul>
+              <li>Provided personalized astrological consultations and guidance to clients.</li>
+              <li>Handled client communications via phone, email, and in-person with professional empathy.</li>
+              <li>Collaborated with marketing and support teams to improve client engagement and service quality.</li>
+            </ul>
           </div>
         </div>
-        <div class="timeline-event">
-          <span class="timeline-date">Feb 2024 – Apr 2025</span>
-          <div class="timeline-content">
-            <strong>Consultant & Moderator at Yodha Astro</strong><br>
-            Consulting foreign clients and moderating birth charts provided by licensed astrologers.
-          </div>
-        </div>
+
+        <!-- If you later want to add another entry, copy this block and alternate left/right -->
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Want to work together or just say hi?</p>
-      <a href="mailto:sapkotaaayudh2@gmail.com" class="email-btn">Send Email</a>
-      <div class="socials" style="margin-top:18px;">
-        <a href="https://www.instagram.com/aayudh_017/" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
-        <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" /></a>
-        <a href="https://github.com/aayudh77" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" /></a>
-      </div>
+    <section id="contact" class="section" data-aos="fade-up">
+      <h2>Get in touch</h2>
+      <p>Use the button below to send me an email.</p>
+      <a class="email-btn" href="mailto:sapkotaaayudh2@gmail.com">Send Email</a>
     </section>
   </main>
 
-  <footer class="footer">
-    <p> Aayudh Sapkota &copy; 2025</p>
-    
+  <footer class="footer" data-aos="fade-up">
+    <div class="socials">
+      <a href="https://www.instagram.com/aayudh_017/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+    <p>© 2025 Aayudh Sapkota</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
