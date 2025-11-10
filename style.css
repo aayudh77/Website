@@ -16,7 +16,7 @@ body {
   transition: background 0.6s ease, color 0.6s ease;
 }
 
-/* ======== HEADER ======== */
+/* HEADER */
 header {
   text-align: center;
   padding: 5rem 1rem 3rem;
@@ -33,7 +33,7 @@ header::before {
   height: 160%;
   background: radial-gradient(circle, rgba(0,195,255,0.2) 0%, transparent 70%);
   animation: pulse 8s infinite alternate;
-  z-index: 0;
+  z-index: -1;
 }
 
 @keyframes pulse {
@@ -49,8 +49,8 @@ header::before {
   border: 4px solid #00c3ff;
   box-shadow: 0 0 25px rgba(0,195,255,0.4);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 
 .profile-pic:hover {
@@ -65,8 +65,8 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 
 header p {
@@ -77,8 +77,8 @@ header p {
 
 .social-links {
   margin-top: 1rem;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 
 .social-links a {
@@ -98,7 +98,7 @@ header p {
   box-shadow: 0 0 15px rgba(0,195,255,0.6);
 }
 
-/* ======== MAIN CONTENT ======== */
+/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
@@ -115,7 +115,7 @@ section {
   padding: 2rem;
   backdrop-filter: blur(12px);
   box-shadow: 0 0 25px rgba(0,0,0,0.2);
-  transition: all 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   transform: translateY(25px);
   opacity: 0;
 }
@@ -136,10 +136,6 @@ h2 {
   border-left: 4px solid #00c3ff;
   padding-left: 10px;
   font-weight: 600;
-}
-
-.exp {
-  margin-bottom: 1.5rem;
 }
 
 .exp h3 {
@@ -167,7 +163,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ======== SKILLS ======== */
+/* SKILLS */
 #skills ul {
   display: flex;
   flex-wrap: wrap;
@@ -191,7 +187,7 @@ a:hover {
   box-shadow: 0 0 10px rgba(0,195,255,0.6);
 }
 
-/* ======== CONTACT ======== */
+/* CONTACT */
 #contact p {
   margin: 0.4rem 0;
 }
@@ -201,11 +197,7 @@ a:hover {
   font-weight: 600;
 }
 
-#contact a:hover {
-  color: #fff;
-}
-
-/* ======== FOOTER ======== */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1.5rem 0;
@@ -217,7 +209,7 @@ footer {
   z-index: 2;
 }
 
-/* ======== THEME TOGGLE ======== */
+/* THEME TOGGLE */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -243,7 +235,7 @@ footer {
   box-shadow: 0 0 20px rgba(0,195,255,0.6);
 }
 
-/* ======== LIGHT MODE ======== */
+/* LIGHT MODE */
 body.light {
   background: linear-gradient(to bottom right, #f7f8fa, #dfe9f3);
   color: #222;
@@ -270,7 +262,7 @@ body.light #skills li:hover {
   color: #fff;
 }
 
-/* ======== PARTICLE BACKGROUND ======== */
+/* PARTICLES */
 #particles {
   position: fixed;
   top: 0;
@@ -281,42 +273,19 @@ body.light #skills li:hover {
   z-index: 0;
 }
 
-/* ======== RESPONSIVE ======== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  header {
-    padding: 3rem 1rem 2rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-  }
-
-  section {
-    padding: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  #skills ul {
-    flex-direction: column;
-  }
-
-  #skills li {
-    text-align: center;
-  }
+  header { padding: 3rem 1rem 2rem; }
+  h1 { font-size: 1.8rem; }
+  .profile-pic { width: 130px; height: 130px; }
+  section { padding: 1.5rem; }
+  h2 { font-size: 1.4rem; }
+  #skills ul { flex-direction: column; }
+  #skills li { text-align: center; }
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
+::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#00c3ff, #4facfe);
   border-radius: 10px;
