@@ -1,32 +1,41 @@
-// --- Fade-in animation on scroll ---
+// --- Fade-in on scroll ---
 const sections = document.querySelectorAll("section");
 
 const showSections = () => {
   const trigger = window.innerHeight * 0.8;
   sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < trigger) sec.classList.add("visible");
+    if (sec.getBoundingClientRect().top < trigger) {
+      sec.classList.add("visible");
+    }
   });
 };
+
 window.addEventListener("scroll", showSections);
 window.addEventListener("load", showSections);
 
-// --- Theme toggle (Dark/Light) ---
+// --- Theme toggle ---
 const toggleBtn = document.createElement("div");
 toggleBtn.className = "theme-toggle";
 toggleBtn.innerHTML = "☀️";
 document.body.appendChild(toggleBtn);
 
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light");
+  toggleBtn.innerHTML = "🌙";
+}
+
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light");
-  toggleBtn.innerHTML = document.body.classList.contains("light") ? "🌙" : "☀️";
+  const isLight = document.body.classList.contains("light");
+  toggleBtn.innerHTML = isLight ? "🌙" : "☀️";
+  localStorage.setItem("theme", isLight ? "light" : "dark");
 });
 
 // --- Particle background ---
 const canvas = document.createElement("canvas");
 canvas.id = "particles";
 document.body.prepend(canvas);
-
 const ctx = canvas.getContext("2d");
 let particles = [];
 
@@ -39,7 +48,8 @@ window.addEventListener("resize", resizeCanvas);
 
 function createParticles() {
   particles = [];
-  for (let i = 0; i < 50; i++) {
+  const count = window.innerWidth < 768 ? 20 : 50;
+  for (let i = 0; i < count; i++) {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
