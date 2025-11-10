@@ -1,97 +1,106 @@
-:root{
-  --bg-dark:#0d1117;
-  --bg-light:#f4f4f5;
-  --text-light:#e6e8eb;
-  --text-dark:#111827;
-  --accent:#58a6ff;
-  --muted:#8b949e;
-  --glass: rgba(255,255,255,0.04);
-  --glass-light: rgba(255,255,255,0.85);
-  --transition: 0.35s;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family:'Montserrat',system-ui,-apple-system,"Segoe UI",Roboto;
-  background:var(--bg-dark);
-  color:var(--text-light);
-  -webkit-font-smoothing:antialiased;
-  transition: background var(--transition), color var(--transition);
-  line-height:1.6;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  line-height: 1.6;
 }
 
-/* NAV */
-.navbar{
-  position:fixed;top:0;left:0;right:0;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1rem 1.25rem;background:rgba(8,10,14,0.85);
-  z-index:1200;backdrop-filter: blur(6px);
-}
-.nav-left{font-weight:700;color:var(--accent)}
-.nav-right a{margin-left:18px;color:inherit;text-decoration:none;font-weight:600}
-.nav-right button{margin-left:14px;background:none;border:none;color:inherit;font-size:1.15rem;cursor:pointer}
-
-/* HERO */
-.hero{padding-top:110px;padding-bottom:48px;text-align:center}
-.profile-pic{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 8px 30px rgba(88,166,255,0.08);margin:0 auto 14px;display:block}
-.typewriter{font-size:2rem;font-weight:700;display:inline-block;white-space:nowrap;overflow:hidden;border-right:2px solid var(--accent);width:24ch;margin:0 auto;animation:typing 3s steps(24,end) 1}
-.subtle{color:var(--muted);margin-top:12px}
-
-/* SECTIONS */
-.section{padding:48px 18px;max-width:980px;margin:0 auto}
-h2{font-size:1.6rem;color:var(--accent);margin-bottom:14px}
-.section p{color:var(--text-light);margin-top:8px}
-
-/* CONTACT BLOCK */
-.contact-block{margin-top:18px;padding:18px;background:var(--glass);border-radius:10px;color:var(--text-light)}
-
-/* PORTFOLIO GRID (kept minimal in CV-based site) */
-.portfolio-grid{display:flex;gap:18px;flex-wrap:wrap}
-.card{background:var(--glass);padding:16px;border-radius:10px;min-width:220px;flex:1;transition:transform var(--transition),box-shadow var(--transition)}
-.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.45)}
-
-/* TIMELINE */
-.timeline{position:relative;margin:18px 0 30px}
-.timeline .line{position:absolute;left:50%;top:0;width:4px;background:var(--accent);transform:translateX(-50%);height:0;border-radius:4px;transition:height 0.25s ease}
-.timeline-container{position:relative;width:50%;padding:12px 28px;box-sizing:border-box}
-.timeline-container.left{left:0;text-align:right}
-.timeline-container.right{left:50%;text-align:left}
-.timeline-card{background:var(--glass);padding:14px;border-radius:10px;display:inline-block;max-width:420px;box-shadow:0 8px 20px rgba(0,0,0,0.35)}
-.timeline-card h3{margin:6px 0 4px}
-.timeline-card h4{margin:0 0 8px;font-weight:600;color:var(--muted);font-size:0.95rem}
-.timeline-card .date{display:block;font-weight:700;color:var(--accent);margin-bottom:8px}
-.timeline-container.left .timeline-card::after{content:'';position:absolute;top:22px;right:-10px;border-width:8px;border-style:solid;border-color:transparent var(--glass) transparent transparent}
-.timeline-container.right .timeline-card::after{content:'';position:absolute;top:22px;left:-10px;border-width:8px;border-style:solid;border-color:transparent transparent transparent var(--glass)}
-
-/* CONTACT BUTTON */
-.email-btn{display:inline-block;margin-top:12px;padding:10px 20px;border-radius:8px;background:#238636;color:#fff;font-weight:700;text-decoration:none;transition:transform var(--transition)}
-.email-btn:hover{transform:translateY(-4px)}
-
-/* FOOTER */
-.footer{padding:26px 16px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:36px}
-.socials a{margin:0 8px;color:var(--accent);text-decoration:none;font-weight:600}
-
-/* LIGHT THEME */
-body.light{background:var(--bg-light);color:var(--text-dark)}
-body.light .navbar{background:rgba(255,255,255,0.85);color:var(--text-dark)}
-body.light .contact-block, body.light .card, body.light .timeline-card{background:var(--glass-light);color:var(--text-dark)}
-body.light .timeline .line{background:#1e40af}
-
-/* RESPONSIVE */
-@media(max-width:992px){
-  .timeline .line{left:36px}
-  .timeline-container{width:100%;left:0;padding-left:56px;padding-right:18px;margin-bottom:18px}
-  .timeline-container.left{text-align:left}
-  .timeline-container.left .timeline-card::after,.timeline-container.right .timeline-card::after{left: -10px; right:auto;border-color:transparent transparent transparent var(--glass)}
-}
-@media(max-width:600px){
-  .profile-pic{width:96px;height:96px}
-  .typewriter{font-size:1.35rem;width:18ch}
-  .section{padding:34px 14px}
-  .nav-right a{display:none} /* keep navbar compact on small screens */
-  .nav-right button{margin-left:0}
+header {
+  text-align: center;
+  padding: 3rem 1rem;
 }
 
-/* TYPEWRITER keyframes */
-@keyframes typing{from{width:0}to{width:24ch}}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00c3ff;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #00c3ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+h2 {
+  color: #00c3ff;
+  margin-bottom: 0.8rem;
+}
+
+.exp h3 {
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
