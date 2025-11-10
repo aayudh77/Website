@@ -1,87 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aayudh Sapkota</title>
-  <link rel="icon" type="image/png" href="aayudh.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayudh Sapkota | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">Aayudh</div>
-    <nav class="nav-right">
-      <a href="#about">About</a>
-      <a href="#timeline">Experience</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-    </nav>
+  <header>
+    <div class="profile">
+      <img src="aayudh.png" alt="Aayudh Sapkota" class="profile-pic" />
+      <h1>Aayudh Sapkota</h1>
+      <p>Writer • Customer Counselor • Tech Enthusiast</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/aayudh_017/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank">LinkedIn</a>
+        <a href="https://wealthypeeps.com/author/aayudh/" target="_blank">Portfolio</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="home" data-aos="fade-down">
-      <img src="aayudh.png" alt="Aayudh Sapkota" class="profile-pic" />
-      <h1 class="typewriter">I am Aayudh Sapkota</h1>
-      <p class="subtle">Customer counselor / advisor — focused on client support & engagement</p>
-    </section>
-
-    <section id="about" class="section" data-aos="fade-up">
-      <h2>About</h2>
+    <section id="about">
+      <h2>About Me</h2>
       <p>
-        I aim to apply my skills and knowledge to contribute to organizational growth while developing professionally.
-        Experienced in client communications, consultation, and cross-team collaboration to improve service quality.
+        I am an aspiring IT and media professional from Gokarneshwor, Nepal. I have experience in
+        customer counseling and writing SEO-friendly articles for digital platforms. I’m passionate about
+        using technology and communication to create meaningful impact and growth.
       </p>
+    </section>
 
-      <div class="contact-block" data-aos="fade-up" data-aos-delay="120">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:sapkotaaayudh2@gmail.com">sapkotaaayudh2@gmail.com</a></p>
-        <p>Phone: <a href="tel:+9779761747789">+977 9761747789</a></p>
-        <p>Location: Dakshindhoka, Gokarneshwor</p>
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="exp">
+        <h3>Customer Counselor/Advisor – Yodha Astrology</h3>
+        <span>Jan 2022 – Dec 2023 | Baneshwor</span>
+        <p>Provided personalized astrological consultations, managed client communications, and promoted services to improve satisfaction and engagement.</p>
+      </div>
+
+      <div class="exp">
+        <h3>Writer/Editor – Hansikar Technology</h3>
+        <span>Jan 2022 – Jan 2023 | Baneshwor</span>
+        <p>Researched and wrote SEO-optimized articles about celebrity news and lifestyle trends. Contributed to <a href="https://wealthypeeps.com/author/aayudh/">WealthyPeeps</a>.</p>
       </div>
     </section>
 
-    <section id="timeline" class="section" data-aos="fade-up">
-      <h2>Experience</h2>
-
-      <div class="timeline">
-        <div class="line"></div>
-
-        <!-- Experience from CV -->
-        <div class="timeline-container left" data-aos="fade-right">
-          <div class="timeline-card">
-            <span class="date">January 2022 – December 2023</span>
-            <h3>Customer Counselor / Advisor</h3>
-            <h4>Yodha Astrology — Baneshwor</h4>
-            <ul>
-              <li>Provided personalized astrological consultations and guidance to clients.</li>
-              <li>Handled client communications via phone, email, and in-person with professional empathy.</li>
-              <li>Collaborated with marketing and support teams to improve client engagement and service quality.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- If you later want to add another entry, copy this block and alternate left/right -->
-      </div>
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>Lumbini Academy</strong> — Intermediate (+2) in Computer Science (CGPA 3.6)</p>
     </section>
 
-    <section id="contact" class="section" data-aos="fade-up">
-      <h2>Get in touch</h2>
-      <p>Use the button below to send me an email.</p>
-      <a class="email-btn" href="mailto:sapkotaaayudh2@gmail.com">Send Email</a>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Customer Support</li>
+        <li>Writing & Editing</li>
+        <li>Content Development</li>
+        <li>Communication</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sapkotaaayudh2@gmail.com">sapkotaaayudh2@gmail.com</a></p>
+      <p>Phone: 9761747789</p>
+      <p>Location: Dakshindhoka, Gokarneshwor</p>
     </section>
   </main>
 
-  <footer class="footer" data-aos="fade-up">
-    <div class="socials">
-      <a href="https://www.instagram.com/aayudh_017/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-      <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-    </div>
-    <p>© 2025 Aayudh Sapkota</p>
+  <footer>
+    <p>© 2025 Aayudh Sapkota. All Rights Reserved.</p>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
